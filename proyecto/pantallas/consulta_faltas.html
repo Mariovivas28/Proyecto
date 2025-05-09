@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estilo_consulfalta.css">
+    <title>Consulta de Faltas</title>
+</head>
+<body>
+    <div class="consulta-container">
+        <h1>Consulta de Faltas</h1>
+
+        <!-- Formulario de búsqueda -->
+        <form action="../config/consulta_faltas.php" method="POST" class="form-busqueda">
+            <div class="form-group">
+                <label for="matricula">Matrícula:</label>
+                <input type="text" id="matricula" name="matricula" placeholder="Buscar por matrícula">
+            </div>
+            <div class="form-group">
+                <label for="grupo">Grupo:</label>
+                <input type="text" id="grupo" name="grupo" placeholder="Buscar por grupo">
+            </div>
+            <div class="form-group">
+                <label for="especialidad">Especialidad:</label>
+                <input type="text" id="especialidad" name="especialidad" placeholder="Buscar por especialidad">
+            </div>
+            <button type="submit" class="btn-buscar">Buscar</button>
+        </form>
+
+        <!-- Tabla de resultados -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Matrícula</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Grupo</th>
+                    <th>Especialidad</th>
+                    <th>Fecha</th>
+                    <th>Justificada</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Los datos se llenarán dinámicamente desde PHP -->
+            </tbody>
+        </table>
+
+        <!-- Botón para volver al menú principal -->
+        <button class="btn-volver" onclick="location.href='menu_principal.html'">Menú</button>
+    </div>
+</body>
+</html>

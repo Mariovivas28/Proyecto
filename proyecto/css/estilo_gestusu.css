@@ -1,0 +1,131 @@
+/* Variables de tema claro */
+:root {
+    --background-color: #f0f0f0;
+    --text-color: #f3e7e7;
+    --container-background-color: #ffffff;
+    --container-shadow-color: rgba(0, 0, 0, 0.1);
+    --primary-color: #007bff;
+    --primary-hover-color: #0056b3;
+    --button-text-color: #ffffff;
+}
+
+/* Variables de tema oscuro */
+body.dark-theme {
+    --background-color: #000000;
+    --text-color: #ffffff;
+    --container-background-color: rgba(0, 0, 0, 0.7);
+    --container-shadow-color: rgba(0, 0, 0, 0.5);
+    --primary-color: #00ff00;
+    --primary-hover-color: #00cc00;
+    --button-text-color: #000000;
+}
+
+/* Estilo para la página de gestión de usuarios */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenedor Principal */
+.gestion-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: var(--container-background-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--container-shadow-color);
+    text-align: center;
+}
+
+/* Encabezado */
+.gestion-container h1 {
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+/* Estilo de la Tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #444;
+}
+
+table thead th {
+    background-color: var(--primary-color);
+    color: var(--button-text-color);
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #3a3a3a;
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: #2a2a2a;
+}
+
+/* Botón Volver */
+.btn-volver {
+    margin-top: 20px;
+    background-color: var(--primary-color);
+    color: var(--button-text-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-volver:hover {
+    background-color: var(--primary-hover-color);
+    transform: scale(1.05);
+}
+
+/* Botón */
+.btn {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: var(--button-text-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: var(--primary-hover-color);
+    transform: scale(1.05);
+}
+
+/* Botón para cambiar de tema */
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: var(--button-text-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+    background-color: var(--primary-hover-color);
+    transform: scale(1.05);
+}

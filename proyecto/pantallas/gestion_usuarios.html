@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estilo_gestusu.css">
+    <title>Gestión de Usuarios</title>
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">Cambiar Tema</button>
+    <div class="gestion-container">
+        <h1>Gestión de Usuarios</h1>
+
+        <!-- Tabla de Usuarios -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Correo</th>
+                    <th>id usuario</th>
+                </tr>
+            </thead>
+            <tbody id="usuarios-tbody">
+                <!-- Los datos se llenarán dinámicamente -->
+            </tbody>
+        </table>
+
+        <!-- Botón para regresar al menú principal -->
+        <button class="btn btn-volver" onclick="location.href='menu_principal.html'">Menú</button>
+    </div>
+    
+    <script>
+
+        // Función para cargar los datos de la tabla usuarios
+        async function cargarUsuarios() {
+            try {
+                const response = await fetch('../config/obtener_usuarios.php');
+                const usuarios = await response.json();
+                const tbody = document.getElementById('usuarios-tbody');
+                usuarios.forEach(usuario => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${usuario.nombre}</td>
+                        <td>${usuario.email}</td>
+                        <td>${usuario.id_usuario}</td>
+                    `;
+                    tbody.appendChild(row);
+                });
+            } catch (error) {
+                console.error('Error al cargar usuarios:', error);
+            }
+        }
+
+        // Llamar a la función al cargar la página
+        window.onload = cargarUsuarios;
+    </script>
+</body>
+</html>

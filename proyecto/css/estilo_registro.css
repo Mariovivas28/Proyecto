@@ -1,0 +1,78 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenedor del formulario */
+.login-container {
+    background-color: var(--container-background-color);
+    padding: 80px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--container-shadow-color);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Encabezado */
+.login-container h1 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+/* Grupo de formulario */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* Etiquetas */
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+/* Campos de entrada */
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #333333;
+    color: #ffffff;
+}
+
+/* Botones */
+.btn-submit {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: var(--button-text-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-submit:hover {
+    background-color: var(--primary-hover-color);
+    transform: scale(1.05);
+}
+
+/* Enlace */
+.login-container p a {
+    color: var(--primary-color);
+    text-decoration: one;
+}
+
+.login-container p a:hover {
+    color: var(--primary-hover-color);
+}

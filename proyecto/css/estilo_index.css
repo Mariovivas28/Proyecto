@@ -1,0 +1,138 @@
+/* Variables de tema claro */
+:root {
+    --background-color: #f0f0f0;
+    --text-color: #333333;
+    --container-background-color: #ffffff;
+    --container-shadow-color: rgba(0, 0, 0, 0.1);
+    --primary-color: #007bff;
+    --primary-hover-color: #0056b3;
+    --button-text-color: #ffffff;
+}
+
+/* Variables de tema oscuro */
+body.dark-theme {
+    --background-color: #000000;
+    --text-color: #ffffff;
+    --container-background-color: rgba(0, 0, 0, 0.7);
+    --container-shadow-color: rgba(0, 0, 0, 0.5);
+    --primary-color: #00ff00;
+    --primary-hover-color: #00cc00;
+    --button-text-color: #000000;
+}
+
+/* Estilo para la página de inicio de sesión */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenedor principal */
+.login-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 80px;
+    background-color: var(--container-background-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--container-shadow-color);
+    text-align: center;
+}
+
+/* Encabezado */
+.login-container h1 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+/* Formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #333333;
+    color: #ffffff;
+}
+
+input::placeholder {
+    color: #aaaaaa;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* Botones */
+.btn-role, .btn-submit, .btn-menu {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: var(--button-text-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-role:hover, .btn-submit:hover, .btn-menu:hover {
+    background-color: var(--primary-hover-color);
+    transform: scale(1.05);
+}
+
+.role-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-container p a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.login-container p a:hover {
+    color: var(--primary-hover-color);
+}
+
+/* Botón para cambiar de tema */
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: var(--button-text-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+    background-color: var(--primary-hover-color);
+    transform: scale(1.05);
+}
